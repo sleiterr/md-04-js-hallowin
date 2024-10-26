@@ -10,40 +10,40 @@ let images = [
   "../imgages/hero/halloween-3.jpg",
 ];
 
-function setActiveSlide() { 
-  slide.src = images[currentImageIndex]
+function setActiveSlide() {
+  slide.src = images[currentImageIndex];
 }
 
 setActiveSlide();
 
 //! NEX-BTN
 
-function next() { 
+function next() {
   if (currentImageIndex >= images.length - 1) {
     currentImageIndex = 0;
-  } else { 
+  } else {
     currentImageIndex++;
   }
 
   setActiveSlide();
-
 }
 
-iconsRight.addEventListener('click', next);
+iconsRight.addEventListener("click", next);
 
 //! LEFT-BTN
 
-function previous() { 
+function previous() {
   if (currentImageIndex === 0) {
     currentImageIndex = images.length - 1;
-  } else { 
+  } else {
     currentImageIndex--;
   }
 
   setActiveSlide();
 }
 
-iconsLeft.addEventListener('click', previous);
+iconsLeft.addEventListener("click", previous);
 
 setInterval(next, 4000);
 
+//? ***********************************

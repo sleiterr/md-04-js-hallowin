@@ -56,38 +56,66 @@ button {
   padding: 0 15px;
 }
 
+/*******************************/
+/*! NAV-BAR */
+/*******************************/
+
 .nav-bar {
-  position: absolute; /* Розміщує меню поверх зображення */
-  top: 20px; /* Відступ від верхнього краю */
-  left: 0;
-  right: 0;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 0 30px;
-  z-index: 3; /* Розташовує меню поверх зображення */
+  z-index: 3;
   color: #fff;
 }
 
 .logo-box {
+  padding: 20px;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   font-size: 24px;
-  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 42px;
 }
 
-.nav-item .nav-link {
+.nav-item {
+}
+
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
   color: #fff;
-  text-decoration: none;
+  letter-spacing: 0.8px;
 }
 
 /*******************************/
 /*! HERO */
 /*******************************/
+
+.image-in-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
 
 .hero-section {
   position: relative;
@@ -102,31 +130,22 @@ button {
 }
 
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Вирівнює елементи по правому краю */
-  justify-content: center; /* Вирівнює по вертикалі в центрі */
-  width: 40%; /* Встановлює ширину контейнера, налаштуйте за потреби */
-  position: relative; /* Додаємо позицію для контролю над елементами */
-  z-index: 2; /* Зберігає вміст поверх зображення */
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* Вирівнює елементи по правому краю */
-  justify-content: center; /* Вирівнює по вертикалі в центрі */
-  width: 40%; /* Задає ширину контейнера */
-  position: relative; /* Додаємо позицію для контролю над елементами */
-  z-index: 2; /* Зберігає вміст поверх зображення */
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 460px;
+  top: 240px;
+  left: -160px;
+  z-index: 2;
 }
 
 .hero-title {
   position: relative;
   font-family: "Poppins", sans-serif;
-  font-size: clamp(80px, 6.4vw, 85px);
   font-weight: 700;
-  /* line-height: 88px; */
+  font-size: clamp(80px, 6.4vw, 85px);
   letter-spacing: 1.2px;
   text-shadow: 0px 4px 4px rgba(230, 153, 11, 0.5);
   color: #fff;
@@ -142,12 +161,48 @@ button {
 
 .hero-text {
   font-family: "Poppins", sans-serif;
-  font-size: clamp(14px, 2vw, 16px);
   font-weight: 400;
+  font-size: clamp(14px, 2vw, 16px);
   color: #ffffffb9;
   letter-spacing: 0.3px;
   line-height: 22px;
 }
+
+/*? BUTTON */
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 45px;
+}
+
+.btn button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.07em;
+  color: #fff;
+}
+
+.btn-about {
+  border: 2px solid #fff;
+  padding: 15px 55px;
+  border-radius: 50px;
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+
+.btn-gallery {
+  border: 2px solid #fff;
+  padding: 15px 55px;
+  border-radius: 50px;
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+
+/*? ARROWS */
 
 .icons-box {
   position: absolute;
@@ -195,18 +250,76 @@ button {
   z-index: 2;
 }
 
-.image-in-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  object-position: top; /* Забезпечує фокус на верхній частині зображення */
-  transform: scale(1.05); /* Легке збільшення для покриття країв */
-  z-index: 1;
-}
-
 /*******************************/
 /*! ABOUT */
 /*******************************/
+
+/*? MODAL */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+  opacity: 1;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.modal {
+  width: 95%;
+  height: 95%;
+  max-width: 392px;
+  max-height: 584px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 72px 24px 24px;
+  border-radius: 4px;
+  background: #fcfcfc;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0 2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button {
+  display: flex;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.close-button {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  border: none;
+  background-color: #404bbf;
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  fill: #ffffff;
+}
