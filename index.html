@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="home work" />
+    <meta name="keywords" content="halloween section" />
+    <meta name="author" content="Oleg Troian" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/icons.css">
+    <title>Halloween</title>
+  </head>
+  <body>
+    <header>
+      <!-- NAV-BAR -->
+      <nav class="nav-bar">
+        <div class="logo-box">
+          <a href="#" class="logo">Logo</a>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <img class="image-in-slide" src="" alt="" />
+
+      <div class="hero-container container">
+        <div class="icons-box">
+          <div class="icons-right">
+            <i class="icon-chevron-right"></i>
+          </div>
+          <div class="icons-left">
+            <i class="icon-chevron-right"></i>
+          </div>
+        </div>
+
+        <div class="hero">
+          <h1 class="hero-title">Halloween</h1>
+          <div class="hero-content">
+            <p class="hero-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Laudantium, hic? Nostrum repellendus eum inventore aut porro nihil
+              enim fuga quod officiis.
+            </p>
+          </div>
+          <div class="btn">
+            <button type="button" class="btn-about">About</button>
+            <button type="button" class="btn-gallery">Gallery</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- ABOUT -->
+    <section class="about-section">
+      <div class="about-container container">
+        <div class="content-box">
+          <h2 class="about-title">About</h2>
+          <p class="about-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
+            dolores obcaecati quibusdam expedita veniam, reiciendis similique
+            inventore dolore amet harum alias accusantium numquam rem explicabo
+            ipsam dolorum mollitia veritatis. Eos!
+          </p>
+          <button type="button" class="about-btn" data-modal-open>read more</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-sectio">
+      <div class="gallery-container container"></div>
+    </section>
+
+    <section class="form-section">
+      <div class="form-container container">
+        <form action="#">
+          <input
+            class="contact-input"
+            type="text"
+            name="Name"
+            id="name-tx"
+            placeholder="name"
+          />
+          <input type="email" name="Email" id="email-txt" placeholder="email" />
+          <textarea
+            name="message"
+            id="message-txt"
+            cols="30"
+            rows="10"
+            placeholder="message"
+          ></textarea>
+          <input type="submit" value="send" />
+        </form>
+      </div>
+    </section>
+    <footer></footer>
+    <!-- MODAL-ABOUT -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <span class="close">&times;</span>
+      </div>
+    </div>
+    <script src="./js/script.js" defer></script>
+  </body>
+</html>
