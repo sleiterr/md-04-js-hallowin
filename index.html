@@ -78,7 +78,29 @@
     <section class="gallery-sectio">
       <div class="gallery-container container">
         <h2 class="gall-title">Gallery</h2>
-          <div class="gallery-wrapper"></div>
+        <div class="gallery-wrapper"></div>
+
+        <div id="modal" class="block">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <button type="button" class="btn-img">
+              <i class="icon-close" id="btn-close"></i>
+            </button>
+            <!-- <span class="close">&times;</span> -->
+            <div class="img-modal-wrapper">
+              <img id="modal-img" />
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="modal-content">
+          <button type="button" class="modal-button">
+            <i class="icon-close"></i>
+          </button>
+          <div class="img-modal-wrapper">
+            <img id="modal-img" />
+          </div>
+        </div> -->
       </div>
     </section>
 
@@ -107,6 +129,7 @@
     <footer></footer>
 
     <!-- MODAL-ABOUT -->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-button" data-modal-close>
@@ -114,9 +137,9 @@
         </button>
       </div>
     </div>
-
-    <script src="./js/script.js" defer></script>
-    <script src="./js/modal.js" defer></script>
-    <script src="./js/img-modal.js" defer></script>
+    <script src="./js/about-modal.js"></script>
+    <script src="./js/gallery.js"></script>
+    <script src="./js/hero-slide.js"></script>
+    <script src="./js/modal-img.js"></script>
   </body>
 </html>
