@@ -317,16 +317,27 @@ button {
   font-weight: 400;
   font-size: 60px;
   color: #333;
-  margin-bottom: 45px;
+  margin-bottom: 60px;
   text-align: center;
 }
 
-.gallery-wrapper {
+.gallery-img {
 }
 
-img {
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 36px;
+  padding: 30px 0;
+}
+
+.gallery-wrapper img {
   width: 430px;
   height: 560px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 10px 10px 11px rgb(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 /*******************************/

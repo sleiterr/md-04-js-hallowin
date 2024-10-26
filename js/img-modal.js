@@ -15,3 +15,5 @@ let img = [
 img.forEach(element => {
   gallery.innerHTML += `<img src='${element}' class='img'>`;
 });
+
+
