@@ -19,10 +19,18 @@
         <div class="logo-box">
           <a href="#" class="logo">Logo</a>
         </div>
+
+        <div class="burger-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
         <ul class="nav-list">
           <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -44,23 +52,21 @@
           <h1 class="hero-title">Halloween</h1>
           <div class="hero-content">
             <p class="hero-text">
-              Halloween, or Hallowe'en (less commonly known as
-              Allhalloween, All Hallows' Eve, or All Saints' Eve)
+              Halloween, or Hallowe'en (less commonly known as Allhalloween, All
+              Hallows' Eve, or All Saints' Eve)
             </p>
           </div>
           <div class="btn">
             <button type="button" class="btn-about">About</button>
             <button type="button" class="btn-gallery">Gallery</button>
           </div>
-          <div class="mob-arrows">
-            
-          </div>
+          <div class="mob-arrows"></div>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="about-section">
+    <section class="about-section" id="about">
       <div class="about-container container">
         <div class="content-box">
           <h2 class="about-title">About</h2>
@@ -81,7 +87,7 @@
     </section>
 
     <!-- GALLERY -->
-    <section class="gallery-sectio">
+    <section class="gallery-sectio" id="gallery">
       <div class="gallery-container container">
         <h2 class="gall-title">Gallery</h2>
         <div class="gallery-wrapper"></div>
@@ -101,7 +107,8 @@
       </div>
     </section>
 
-    <section class="form-section">
+    <!-- FORM-CONTACT -->
+    <section class="form-section" id="contact">
       <div class="form-container container">
         <div class="form-content">
           <h2 class="contact-title">Contact</h2>
@@ -161,10 +168,11 @@
       </div>
     </div>
 
-    <script src="./js/about-modal.js"></script>
-    <script src="./js/gallery.js"></script>
-    <script src="./js/hero-slide.js"></script>
-    <script src="./js/modal-img.js"></script>
-    <script src="./js/form-valid.js"></script>
+    <script src="./js/about-modal.js" defer></script>
+    <script src="./js/gallery.js" defer></script>
+    <script src="./js/hero-slide.js" defer></script>
+    <script src="./js/modal-img.js" defer></script>
+    <script src="./js/form-valid.js" defer></script>
+    <script src="./js/burger-menu.js" defer></script>
   </body>
 </html>

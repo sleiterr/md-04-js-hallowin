@@ -21,6 +21,78 @@
     letter-spacing: 1.8px;
   }
 
+  /*? ==== BURGER-MENU ====*/
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 16px;
+  }
+
+  .nav-link {
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .burger-btn {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    width: 30px;
+    height: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    z-index: 999;
+  }
+
+  .bar {
+    height: 4px;
+    width: 100%;
+    background-color: rgb(219, 120, 74);
+    transition: 0.3s ease;
+    border-radius: 10px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* padding-left: 16px; */
+    background-color: rgba(0, 0, 0, 0.911);
+    z-index: 666;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .bar:nth-child(1).active {
+    transform: rotate(45deg) translate(9px, 5px);
+  }
+  .bar:nth-child(2).active {
+    display: none;
+  }
+  .bar:nth-child(3).active {
+    transform: rotate(-45deg) translate(9px, -5px);
+  }
+
   /*! HERO-SECTION */
 
   .image-in-slide {

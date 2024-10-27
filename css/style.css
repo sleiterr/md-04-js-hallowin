@@ -61,6 +61,14 @@ button {
 /*! NAV-BAR */
 /*******************************/
 
+.burger-btn {
+  display: none;
+}
+
+.nav-list-menu.show {
+  display: flex;
+}
+
 .nav-bar {
   position: absolute;
   display: flex;
@@ -405,7 +413,7 @@ button {
   opacity: 1;
   visibility: hidden;
   pointer-events: none;
-} 
+}
 
 .modal {
   width: 95%;
