@@ -1,0 +1,174 @@
+@media screen and (max-width: 425px) {
+  /*! NAV-BAR */
+
+  .nav-bar {
+    padding: 0 18px;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .logo-box {
+    padding: 22px 0;
+  }
+
+  .logo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1.8px;
+  }
+
+  /*! HERO-SECTION */
+
+  .image-in-slide {
+  }
+
+  .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 360px;
+    top: 360px;
+    left: 1px;
+    z-index: 2;
+  }
+
+  .hero-title {
+    font-weight: 600;
+    font-size: 55px;
+    letter-spacing: 1.2px;
+    text-shadow: 0px 4px 4px rgba(230, 153, 11, 0.5);
+    color: #fff;
+    margin-bottom: 32px;
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    max-width: 560px;
+    z-index: 2;
+  }
+
+  .hero-text {
+    font-size: clamp(18px, 2vw, 22px);
+    color: #ffffffb9;
+    letter-spacing: 0.6px;
+    line-height: 26px;
+  }
+
+  /*? BUTTON */
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 45px;
+  }
+
+  .btn button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.07em;
+    color: #fff;
+  }
+
+  .btn-about {
+    padding: 12px 55px;
+  }
+
+  .btn-gallery {
+    display: none;
+  }
+
+  /*? ARROWS */
+
+  .icons-box {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    right: 118px;
+    top: 700px;
+    z-index: 2;
+  }
+
+  /*! ABOUT-SECTION */
+
+  .about-section {
+    padding: 80px 0;
+  }
+
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 350px;
+  }
+
+  .about-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    color: #333;
+    margin-bottom: 40px;
+  }
+
+  .about-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #333;
+    letter-spacing: 0.1px;
+    line-height: 1.6em;
+    text-align: justify;
+  }
+
+  .about-btn {
+    padding: 18px 72px;
+  }
+
+  /*! FORM-SECTION */
+
+  .contact-title {
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 14px;
+    color: #333;
+  }
+
+  .contact-subject {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 1.4em;
+    text-align: justify;
+    padding: 18px 0;
+    color: #333;
+    /* border: 1px solid red; */
+  }
+
+  .form {
+    min-width: 360px;
+  }
+
+  input {
+    height: 42px;
+
+    resize: none;
+  }
+
+  input[type="submit"] {
+    font-weight: 500;
+    padding: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+  }
+}

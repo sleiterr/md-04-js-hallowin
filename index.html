@@ -9,6 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/icon.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media-queries.css" />
     <title>Halloween</title>
   </head>
   <body>
@@ -43,14 +44,16 @@
           <h1 class="hero-title">Halloween</h1>
           <div class="hero-content">
             <p class="hero-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Laudantium, hic? Nostrum repellendus eum inventore aut porro nihil
-              enim fuga quod officiis.
+              Halloween, or Hallowe'en (less commonly known as
+              Allhalloween, All Hallows' Eve, or All Saints' Eve)
             </p>
           </div>
           <div class="btn">
             <button type="button" class="btn-about">About</button>
             <button type="button" class="btn-gallery">Gallery</button>
+          </div>
+          <div class="mob-arrows">
+            
           </div>
         </div>
       </div>
@@ -62,10 +65,13 @@
         <div class="content-box">
           <h2 class="about-title">About</h2>
           <p class="about-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
-            dolores obcaecati quibusdam expedita veniam, reiciendis similique
-            inventore dolore amet harum alias accusantium numquam rem explicabo
-            ipsam dolorum mollitia veritatis. Eos!
+            Halloween is thought to have influences from Christian beliefs and
+            practices. The English word 'Halloween' comes from "All Hallows'
+            Eve", being the evening before the Christian holy days of All
+            Hallows' Day (All Saints' Day) on 1 November and All Souls' Day on 2
+            November.Since the time of the early Church, major feasts in
+            Christianity (such as Christmas, Easter and Pentecost) had vigils
+            that began the night before, as did the feast of All Hallows'.
           </p>
           <button type="button" class="about-btn" data-modal-open>
             read more
@@ -92,29 +98,31 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="modal-content">
-          <button type="button" class="modal-button">
-            <i class="icon-close"></i>
-          </button>
-          <div class="img-modal-wrapper">
-            <img id="modal-img" />
-          </div>
-        </div> -->
       </div>
     </section>
 
     <section class="form-section">
       <div class="form-container container">
-        <form action="#">
+        <div class="form-content">
+          <h2 class="contact-title">Contact</h2>
+          <p class="contact-subject">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem velit
+            itaque, amet laudantium nobis culpa laboriosam iste dolorem incidunt
+            ea quasi autem facilis perferendis? Mollitia accusamus similique sed
+            adipisci obcaecati?
+          </p>
+        </div>
+
+        <form action="#" id="login-form" class="form">
+          <div class="mesg"></div>
           <input
             class="contact-input"
             type="text"
-            name="Name"
+            name="name"
             id="name-tx"
             placeholder="name"
           />
-          <input type="email" name="Email" id="email-txt" placeholder="email" />
+          <input type="email" name="email" id="email-txt" placeholder="email" />
           <textarea
             name="message"
             id="message-txt"
@@ -125,21 +133,38 @@
           <input type="submit" value="send" />
         </form>
       </div>
+      <!-- FORM-MSG -->
     </section>
-    <footer></footer>
+    <footer class="footer"></footer>
 
     <!-- MODAL-ABOUT -->
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="modal-button" data-modal-close>
-          <i class="icon-close"></i>
-        </button>
+        <div class="border">
+          <button type="button" class="modal-button" data-modal-close>
+            <i class="icon-close"></i>
+          </button>
+          <div class="content-modal">
+            <h3 class="modal-title">Halloween</h3>
+            <p class="modal-text">
+              At the turn of the Antiquity and Middle Ages, the Catholic Church
+              celebrated the feast of All Saints on May 13 (the Orthodox
+              celebrate this feast on the first Sunday after the Descent of the
+              Holy Spirit). However, in the 8th century, Pope Gregory III
+              consecrated a chapel in St. Peter's Basilica in Rome in honor of
+              All Saints on November 1, and transferred the celebration of this
+              feast in Rome to the day of the consecration of this chapel.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+
     <script src="./js/about-modal.js"></script>
     <script src="./js/gallery.js"></script>
     <script src="./js/hero-slide.js"></script>
     <script src="./js/modal-img.js"></script>
+    <script src="./js/form-valid.js"></script>
   </body>
 </html>

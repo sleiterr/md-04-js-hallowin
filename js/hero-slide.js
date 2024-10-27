@@ -3,6 +3,7 @@ const iconsRight = document.querySelector(".icons-right");
 const iconsLeft = document.querySelector(".icons-left");
 
 let currentImageIndex = 0;
+let intervalSet = null;
 
 let images = [
   "../imgages/hero/halloween-1.jpg",
@@ -44,6 +45,21 @@ function previous() {
 
 iconsLeft.addEventListener("click", previous);
 
-setInterval(next, 4000);
+//! SET-INTERVAL-FOR-VW
+
+if (window.innerWidth > 425) {
+  setInterval(next, 5000);
+}
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 425 && !interval) {
+    intervalSet = setInterval(next, 5000);
+  } else if (window.innerWidth <= 425 && intervalSet) {
+    clearInterval(intervalSet);
+    intervalSet = null;
+  }
+});
+
+// setInterval(next, 5000);
 
 //? ***********************************

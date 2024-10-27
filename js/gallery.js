@@ -1,3 +1,5 @@
+// GALLERY.JS
+
 const gallery = document.querySelector(".gallery-wrapper");
 
 let img = [

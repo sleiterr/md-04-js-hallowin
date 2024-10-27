@@ -1,5 +1,7 @@
+// MODAL-IMG.JS
+
 const imgModal = document.querySelector("#modal");
-const imgGall = document.querySelector(".img");
+const imgGall = document.querySelectorAll(".img");
 const imgInModal = document.querySelector("#modal-img");
 const btnClose = document.querySelector("#btn-close");
 
@@ -13,3 +15,10 @@ window.addEventListener("click", (e) => {
   }
 });
 
+imgGall.forEach((element) => {
+  element.addEventListener("click", (e) => {
+    let imgSrc = e.target.getAttribute("src");
+    imgInModal.setAttribute("src", imgSrc);
+    imgModal.classList.add('show')
+  });
+});
