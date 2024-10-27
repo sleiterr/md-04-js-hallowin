@@ -47,16 +47,28 @@ iconsLeft.addEventListener("click", previous);
 
 //! SET-INTERVAL-FOR-VW
 
-if (window.innerWidth > 425) {
-  setInterval(next, 5000);
+function startInterval() {
+  if (window.innerWidth > 425 && !intervalSet) {
+    intervalSet = setInterval(next, 5000);
+  }
 }
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 425 && !interval) {
-    intervalSet = setInterval(next, 5000);
-  } else if (window.innerWidth <= 425 && intervalSet) {
+function clearSlideInterval() {
+  if (intervalSet) {
     clearInterval(intervalSet);
     intervalSet = null;
+  }
+}
+
+// Initial check on page load
+startInterval();
+
+// Handle window resizing
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 425) {
+    startInterval();
+  } else {
+    clearSlideInterval();
   }
 });
 
