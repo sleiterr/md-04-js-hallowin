@@ -97,18 +97,21 @@
 
   .image-in-slide {
     width: 100vw;
-    height: auto; /* Дозволяє зображенню масштабуватися вертикально */
-    max-height: 100vh; /* Зберігає максимальну висоту viewport */
+    height: 100vh;
+    /* object-fit: cover; */
+
     object-fit: cover;
-    object-position: center center; /* Центрує зображення */
+    object-position: center center;
   }
 
   .hero {
     position: relative;
     display: flex;
+
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
     min-width: 360px;
     top: 360px;
     left: 1px;
@@ -169,11 +172,19 @@
   .icons-box {
     position: absolute;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     gap: 80px;
     right: 118px;
     top: 700px;
     z-index: 2;
+  }
+
+  .icons-right {
+    transform: rotate(360deg);
+  }
+
+  .icons-left {
+    transform: rotate(180deg);
   }
 
   /*! ABOUT-SECTION */

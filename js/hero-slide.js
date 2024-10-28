@@ -5,18 +5,6 @@ const iconsLeft = document.querySelector(".icons-left");
 let currentImageIndex = 0;
 let intervalSet = null;
 
-let images = [
-  "./imgages/hero/halloween-1.jpg",
-  "./imgages/hero/halloween-2.png",
-  "./imgages/hero/halloween-3.jpg",
-];
-
-function setActiveSlide() {
-  slide.src = images[currentImageIndex];
-}
-
-setActiveSlide();
-
 //! NEX-BTN
 
 function next() {
@@ -45,7 +33,7 @@ function previous() {
 
 iconsLeft.addEventListener("click", previous);
 
-//! SET-INTERVAL-FOR-VW
+//! SET INTERVAL FOR CHECKING VIEWPORT WIDTH (VW) SCREEN
 
 function startInterval() {
   if (window.innerWidth > 425 && !intervalSet) {
@@ -65,6 +53,9 @@ startInterval();
 
 // Handle window resizing
 window.addEventListener("resize", () => {
+  images = getImages()
+  setActiveSlide()
+
   if (window.innerWidth > 425) {
     startInterval();
   } else {
