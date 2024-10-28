@@ -121,6 +121,7 @@ button {
   left: 0;
   width: 100vw;
   height: 100vh;
+  /* object-fit: fill; */
   object-fit: cover;
   object-position: center;
   z-index: 1;
@@ -171,10 +172,10 @@ button {
 .hero-text {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: clamp(14px, 2vw, 16px);
+  font-size: clamp(18px, 2vw, 20px);
   color: #ffffffb9;
-  letter-spacing: 0.3px;
-  line-height: 22px;
+  letter-spacing: 0.6px;
+  line-height: 28px;
 }
 
 /*? BUTTON */

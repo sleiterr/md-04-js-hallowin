@@ -96,6 +96,11 @@
   /*! HERO-SECTION */
 
   .image-in-slide {
+    width: 100vw;
+    height: auto; /* Дозволяє зображенню масштабуватися вертикально */
+    max-height: 100vh; /* Зберігає максимальну висоту viewport */
+    object-fit: cover;
+    object-position: center center; /* Центрує зображення */
   }
 
   .hero {
