@@ -6,9 +6,9 @@ let currentImageIndex = 0;
 let intervalSet = null;
 
 let images = [
-  "../imgages/hero/halloween-1.jpg",
-  "../imgages/hero/halloween-2.png",
-  "../imgages/hero/halloween-3.jpg",
+  "./imgages/hero/halloween-1.jpg",
+  "./imgages/hero/halloween-2.png",
+  "./imgages/hero/halloween-3.jpg",
 ];
 
 function setActiveSlide() {
