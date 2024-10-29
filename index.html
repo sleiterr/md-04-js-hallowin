@@ -61,8 +61,8 @@
             </p>
           </div>
           <div class="btn">
-            <button type="button" class="btn-about">About</button>
-            <button type="button" class="btn-gallery">Gallery</button>
+            <button type="button" class="btn-about" id="sign">sign up</button>
+            <!-- <button type="button" class="btn-gallery">Gallery</button> -->
           </div>
           <div class="mob-arrows"></div>
         </div>
@@ -146,7 +146,6 @@
       </div>
       <!-- FORM-MSG -->
     </section>
-    <footer class="footer"></footer>
 
     <!-- MODAL-ABOUT -->
 
@@ -172,6 +171,90 @@
       </div>
     </div>
 
+    <!-- MODAL-REGISTRATION -->
+
+    <div class="backdrop-1 is-hidden" id="modal-window">
+      <!-- is-hidden -->
+ 
+      <div class="form-box">
+
+        <form class="form-modal" id="sign-up">
+          <button type="button" class="btn-regst" id="modal-close">
+            <i class="icon-close registretion"></i> 
+          </button>
+          <input
+            type="text"
+            name="firstName"
+            id="first-name"
+            placeholder="Name"
+            class="input-tx"
+          />
+
+          <input
+            type="text"
+            name="lastName"
+            id="last-name"
+            placeholder="Last name"
+            class="input-tx"
+          />
+
+          <input
+            type="number"
+            name="age"
+            placeholder="Age"
+            required
+            maxlength="3"
+            class="input-tx"
+          />
+
+          <input
+            type="email"
+            name="email"
+            id="email-text"
+            placeholder="Email address"
+            class="input-tx"
+          />
+
+          <div class="pass">
+            <label>
+              <span class="pass-help">minimum 3 karakterer</span>
+              
+              <input
+              type="password"
+              name="password"
+              autocomplete="off"
+              required
+              minlength="3"
+              maxlength="20"
+              placeholder="Password"
+              class="pass-input"
+              />
+            </label>
+            <label>
+              <input
+              type="password"
+              name="passwordRepeat"
+              autocomplete="off"
+              placeholder="Gentag Adgangskode"
+              class="pass-input"
+              />
+            </label>
+          </div>
+          
+          <input
+          type="submit"
+          name="submit"
+          value="Opret Bruger"
+          id="submit-form"
+          />
+          <!-- <div class="msgg-form"></div> -->
+        </form>
+      </div>
+
+    </div>
+
+    <footer class="footer"></footer>
+
     <script src="./js/about-modal.js" defer></script>
     <script src="./js/gallery.js" defer></script>
     <script src="./js/hero-slide.js" defer></script>
@@ -179,5 +262,7 @@
     <script src="./js/form-valid.js" defer></script>
     <script src="./js/burger-menu.js" defer></script>
     <script src="./js/hero-array.js" defer></script>
+    <script src="./js/sign-up.js" defer></script>
+    <script src="./js/open-registration-modal.js" defer></script>
   </body>
 </html>

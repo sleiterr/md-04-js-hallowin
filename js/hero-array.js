@@ -1,13 +1,12 @@
-let imagesDesctop = [
+const imagesDesctop = [
   "./imgages/hero/halloween-1.jpg",
   "./imgages/hero/halloween-2.png",
   "./imgages/hero/halloween-3.jpg",
 ];
 
-let imagesMobile = [
+const imagesMobile = [
   "./imgages/hero/halloween-1 -small.jpg",
   "./imgages/hero/halloween-2 -small.png",
-  
   "./imgages/hero/halloween-3 -small.png",
 ];
 

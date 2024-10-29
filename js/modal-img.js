@@ -6,7 +6,7 @@ const imgInModal = document.querySelector("#modal-img");
 const btnClose = document.querySelector("#btn-close");
 
 btnClose.addEventListener("click", () => {
-  imgModal.classList.remove("show");
+  imgModal.classList.add("show");
 });
 
 window.addEventListener("click", (e) => {

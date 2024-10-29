@@ -5,11 +5,6 @@ document.querySelector("#login-form").addEventListener("submit", function (event
   const user = form.elements.name.value.trim();
   const email = form.elements.email.value.trim();
 
-  //! check method trim() if work !
-  // console.log("User input before trim:", form.elements.name.value);
-  // console.log("User input after trim:", user);
-  // console.log("Email input before trim:", form.elements.email.value);
-  // console.log("Email input after trim:", email);
 
   const message = document.querySelector(".mesg");
   const heading = document.querySelector(".contact-title");

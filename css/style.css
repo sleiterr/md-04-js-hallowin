@@ -41,7 +41,7 @@ body {
   font-size: 1rem;
   height: 100%;
   line-height: 1;
-  background-color: #a9bfc3;
+  /* background-color: #a9bfc3; */
 }
 button {
   cursor: pointer;
@@ -214,7 +214,6 @@ button {
 
 /*? ARROWS */
 
-
 .icons-box {
   position: absolute;
   display: flex;
@@ -372,7 +371,7 @@ button {
 }
 
 .block.show {
-  display: block; /* Показати модалку */
+  display: block;
 }
 
 /* Modal Content */
@@ -504,6 +503,20 @@ button {
   line-height: 1.6;
 }
 
+/*? MODAL-REGISTRATION */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 3;
+}
+
 /*******************************/
 /*! FORM */
 /*******************************/
@@ -617,6 +630,183 @@ input[type="submit"]:hover {
   max-height: 100%;
   border-radius: 22px;
   box-shadow: 9px 11px 23px -5px rgba(0, 0, 0, 0.75);
+}
+
+/*******************************/
+/*! FORM-REGISTRATION */
+/*******************************/
+
+.is-hidden {
+  display: none;
+}
+
+/*? FORM */
+
+.backdrop-1 {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 3;
+}
+
+.form-box {
+  position: relative;
+  padding: 20px;
+}
+
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 34px;
+  gap: 22px;
+  border-radius: 8px;
+  /* background: #fff; */
+  backdrop-filter: blur(8px);
+  border: 3px solid rgb(116, 116, 116, 0.4);
+  box-shadow: 8px 8px 16px rgba(136, 136, 136, 0.623);
+  min-width: 480px;
+  min-height: 625px;
+}
+
+.registretion {
+  color: #ffffffa6;
+  font-size: 18px;
+}
+
+.btn-regst:hover,
+.btn-regst:focus {
+  color: #fff;
+  outline-color: rgba(0, 0, 0, 0);
+  background-color: #404bbf;
+}
+
+.btn-regst {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  background-color: transparent;
+  outline: 2px solid rgba(192, 191, 191, 0.459);
+
+  cursor: pointer;
+}
+
+/* .msgg-form {
+  position: absolute;
+  font-family: "Montserrat", system-ui;
+  font-weight: 700;
+  font-size: 18px;
+  top: 20px;
+  text-align: center;
+  color: rgb(206, 40, 40);
+  letter-spacing: 0.8px;
+  line-height: 1.2em;
+  padding: 60px;
+} */
+
+.pass-input {
+  /* border-radius: 8px; */
+  background: #fff;
+  margin-top: 12px;
+}
+
+.pass-input::placeholder{
+  color: #fff;  
+}
+
+.pass-input,
+.input-tx {
+  font-family: "Montserrat", system-ui;
+  font-size: 16px;
+  color: #fff;
+
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  width: 100%;
+
+  border: none;
+  height: 30px;
+  padding: 10px;
+  border-radius: 0;
+  resize: none;
+
+  background: transparent;
+  border-bottom: 2px solid #000;
+  transition: border-color 250ms;
+}
+
+.pass-input,
+.input-tx::placeholder {
+  color: #fff;
+}
+
+.pass-input,
+.input-tx:valid {
+  border-bottom: 2px solid rgba(221, 153, 5, 0.911);
+  /* border: 2px solid springgreen; */
+}
+
+.pass-success {
+  padding: 10px;
+  background-color: rgba(30, 243, 30, 0.466);
+  border-radius: 8px;
+}
+
+.pass-help {
+  font-size: 14px;
+  font-family: "Montserrat", system-ui;
+  font-style: italic;
+  color: #ffffffa6;
+}
+
+.pass {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  gap: 22px;
+  width: 100%;
+}
+
+/** BTTN */
+
+#submit-form {
+  font-weight: 500;
+  background: rgb(68, 71, 231);
+  border: none;
+  width: 50%;
+  border-radius: 4px;
+
+  color: #fff;
+  padding: 22px;
+  line-height: 0;
+  cursor: pointer;
+  margin-top: 36px;
+}
+
+#submit-form:hover {
+  background: rgb(68, 71, 231, 0.8);
+  transition: 250ms ease;
 }
 
 /*******************************/
